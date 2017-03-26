@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action=" {{url_for('add_cash')}} ", method="POST">
+        <div class="form-group">
+            <p>Current cash is {{cash}}</p>
+        </div>
+        <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="text" class="form-control" name="cash" placeholder="Amount">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Cash"/>
+        </div>
+    </form>
+{% endblock %}
